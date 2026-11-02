@@ -28,6 +28,90 @@ a {
   text-decoration: none;
 }
 
+.notice-dialog {
+  width: min(560px, calc(100% - 32px));
+  max-height: min(720px, calc(100% - 32px));
+  margin: auto;
+  padding: clamp(28px, 6vw, 52px);
+  overflow: auto;
+  border: 0;
+  background: var(--paper);
+  box-shadow: 0 24px 90px rgb(0 0 0 / 24%);
+  color: var(--ink);
+  font-family: var(--body);
+}
+
+.notice-dialog[open] {
+  display: block;
+  animation: rise-in 300ms ease-out both;
+}
+
+.notice-dialog::backdrop {
+  background: rgb(9 34 37 / 76%);
+  backdrop-filter: blur(4px);
+}
+
+.notice-kicker {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0 0 24px;
+  color: #648179;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+}
+
+.notice-dialog h2 {
+  font-size: clamp(42px, 8vw, 62px);
+  line-height: 0.98;
+}
+
+.notice-copy,
+.notice-contact {
+  color: #536d6b;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.notice-copy {
+  margin: 25px 0 10px;
+}
+
+.notice-contact {
+  margin: 0 0 28px;
+}
+
+.notice-dialog a:not(.notice-dismiss) {
+  color: #b94f39;
+  font-weight: 700;
+  text-decoration: underline;
+  text-decoration-color: rgb(185 79 57 / 42%);
+  text-underline-offset: 3px;
+}
+
+.notice-dismiss {
+  display: inline-flex;
+  min-height: 46px;
+  align-items: center;
+  gap: 16px;
+  padding: 0 18px;
+  border: 0;
+  background: var(--ink);
+  color: #fff;
+  cursor: pointer;
+  font: 600 12px var(--body);
+}
+
+.notice-dismiss span {
+  color: #f2a28a;
+  font-size: 16px;
+}
+
+.notice-dismiss:hover {
+  background: #245157;
+}
+
 .site-header {
   position: absolute;
   z-index: 2;

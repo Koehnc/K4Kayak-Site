@@ -18,6 +18,22 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
+    <dialog class="notice-dialog" id="site-notice" aria-labelledby="notice-title" aria-describedby="notice-description">
+      <p class="notice-kicker"><span class="eyebrow__dot"></span> K4 KAYAK · A QUICK NOTE</p>
+      <h2 id="notice-title">New website,<br />under construction.</h2>
+      <p class="notice-copy" id="notice-description">
+        To browse Chile Trips, visit
+        <a href="https://puconkayakretreat.com/" target="_blank" rel="noopener noreferrer">puconkayakretreat.com</a>.
+      </p>
+      <p class="notice-contact">
+        For further assistance and potential discounts, reach out to
+        <a href="mailto:carterhkoehn@gmail.com">carterhkoehn@gmail.com</a>.
+      </p>
+      <form method="dialog">
+        <button class="notice-dismiss" type="submit">Continue to website <span aria-hidden="true">↓</span></button>
+      </form>
+    </dialog>
+
     <header class="site-header">
       <a class="wordmark" href="#home" aria-label="K4 Kayak home">
         <span class="wordmark__mark" aria-hidden="true">K4</span>
@@ -81,5 +97,8 @@
       <p>Made for days on the water.</p>
       <span class="footer-status"><span class="eyebrow__dot"></span> TEST PAGE READY</span>
     </footer>
+    <script>
+      document.querySelector("#site-notice").showModal();
+    </script>
   </body>
 </html>
